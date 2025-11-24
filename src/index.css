@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mix: repeating-linear-gradient(white);
+}
+
+.container {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px; /* optional max-width for large screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* better for small screens */
+  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+  background: var(--mix);
+}
+
+/* Make table responsive */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  overflow-x: auto;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* For smaller devices */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 5px;
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  #profile {
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    left: 10px;
+  }
+
+  #blood {
+    top: 10px;
+    left: 50px;
+    font-size: 12px;
+  }
+
+  #male, #female {
+    font-size: 16px;
+  }
+
+  #first, #second, #third {
+    font-size: 16px;
+  }
+}
+
+/* For very small devices */
+@media screen and (max-width: 480px) {
+  th, td {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  #profile {
+    height: 25px;
+    width: 25px;
+    top: 3px;
+    left: 5px;
+  }
+
+  #blood {
+    top: 8px;
+    left: 40px;
+    font-size: 10px;
+  }
+
+  #male, #female {
+    font-size: 14px;
+  }
+
+  #first, #second, #third {
+    font-size: 14px;
+  }
+}
